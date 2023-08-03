@@ -11,14 +11,9 @@
 
     {# Stylesheets #}
     <link rel="stylesheet" href="{% static 'thirdparty/bootstrap/bootstrap@5.3.1.css' %}" />
-    <link rel="stylesheet" href="{% static 'thirdparty/bootstrap/bootstrap-icons.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
-    {% if css %}
-        {% for file in css %}
-            <link rel="stylesheet" href="{% static file %}" />
-        {% endfor %}
-    {% endif %}
+
 </head>
 <body>
     {# Main header #}
@@ -38,16 +33,11 @@
 
     {# Footer copyright, contact, etc. #}
     <footer>
-        <p class="text-center text-secondary mt-4">© 2023 The Broke Coders</p>
+
     </footer>
 
     {# JavaScript #}
     <script src="{% static 'thirdparty/bootstrap/bootstrap@5.3.1.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-    {% if js %}
-        {% for file in js %}
-            <script type="text/javascript" src="{% static file %}" ></script>
-        {% endfor %}
-    {% endif %}
 </body>
 </html>
